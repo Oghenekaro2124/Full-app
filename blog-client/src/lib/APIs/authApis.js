@@ -1,7 +1,8 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { userApis } from "./userApis";
 import { clearCurrentUser } from "../redux/userSlice";
-let baseUrl = process.env.REACT_APP_BASE_URL;
+let baseUrl =
+  process.env.REACT_APP_BASE_URL || "https://full-app-p8cv.onrender.com";
 
 export const authApis = createApi({
   reducerPath: "authApis",
