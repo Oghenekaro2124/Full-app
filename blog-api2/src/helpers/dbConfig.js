@@ -1,13 +1,14 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
+const { DB_URI } = require("../config/index");
 
 const connectDB = async () => {
-    try {
-        await mongoose.connect("mongodb://localhost:27017/blog-api2"); // Removed deprecated options
-        console.log("Connected to MongoDB");
-    } catch (error) {
-        console.error("Error connecting to MongoDB:", error.message);
-        process.exit(1); // Exit process with failure
-    }
+  try {
+    await mongoose.connect(DB_URI); // Removed deprecated options
+    console.log("Connected to MongoDB");
+  } catch (error) {
+    console.error("Error connecting to MongoDB:", error.message);
+    process.exit(1); // Exit process with failure
+  }
 };
 
 module.exports = connectDB;

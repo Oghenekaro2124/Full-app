@@ -9,7 +9,7 @@ const app = express();
 // global middleware configuration for cors
 app.use(
   cors({
-    origin: ["http://localhost:3000"],
+    origin: ["http://localhost:3000", "https://full-app-rho.vercel.app"],
     credentials: true,
   })
 );
